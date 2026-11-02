@@ -1,4 +1,4 @@
-# study room booking
+# Study Room Booking
 ระบบจองห้องติวและห้องทำงานกลุ่ม
 **สมาชิกในกลุ่ม 4**
 ---
@@ -14,3 +14,4 @@
 ---
 ## GitHub Pages
 https://bewka555.github.io/smart-campus-study-room-booking/
+---
