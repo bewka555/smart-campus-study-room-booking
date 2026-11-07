@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>หน้าแรก | Study Room Booking</title>
+  <meta name="description" content="ระบบจองห้องติวและห้องทำงานกลุ่ม ดูห้องที่ว่างตอนนี้และจองได้ทันที">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">ข้ามไปยังเนื้อหาหลัก</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">Study Room Booking</a>
+      <nav aria-label="เมนูหลัก">
+        <ul class="nav-list">
+          <li><a href="index.html" aria-current="page">หน้าแรก</a></li>
+          <li><a href="rooms.html">ห้องทั้งหมด</a></li>
+          <li><a href="booking.html">จองห้อง</a></li>
+          <li><a href="my-bookings.html">การจองของฉัน</a></li>
+          <li><a href="rules.html">กฎและคำถามพบบ่อย</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="hero" aria-labelledby="page-title">
+      <h1 id="page-title">ห้องติวว่างไหม ดูก่อนเดินไป</h1>
+      <p class="hero-text">ดูห้องติวและห้องทำงานกลุ่มในห้องสมุดและคณะ เลือกช่วงเวลาที่ว่าง แล้วจองได้โดยไม่ซ้อนเวลากับคนอื่น</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="booking.html">จองห้อง</a>
+        <a class="btn btn-secondary" href="rooms.html">ดูห้องทั้งหมด</a>
+      </div>
+      <p class="clock" aria-live="off">
+        <span id="today-label">กำลังโหลดวันที่…</span>
+      </p>
+    </section>
+
+    <section class="overview" aria-labelledby="overview-title">
+      <h2 id="overview-title">ภาพรวมวันนี้</h2>
+      <dl class="stats" id="stats">
+        <div class="stat">
+          <dt>ห้องทั้งหมด</dt>
+          <dd id="stat-total">–</dd>
+        </div>
+        <div class="stat">
+          <dt>ว่างตอนนี้</dt>
+          <dd id="stat-free">–</dd>
+        </div>
+        <div class="stat">
+          <dt>การจองวันนี้</dt>
+          <dd id="stat-bookings">–</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="now-section" aria-labelledby="now-title">
+      <h2 id="now-title">ห้องที่ว่างตอนนี้</h2>
+      <p id="status-message" class="message" role="status">กำลังโหลดข้อมูลห้อง…</p>
+      <div id="room-grid" class="room-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>SC17332 Mini Project · Smart Campus · กลุ่มที่ 4 Study Room Booking</p>
+      <p>เปิดให้จอง 08:00–20:00 น. จองได้ครั้งละไม่เกิน 2 ชั่วโมง</p>
+    </div>
+  </footer>
+
+  <script src="js/index.js"></script>
+</body>
+</html>
