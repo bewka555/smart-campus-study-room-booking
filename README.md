@@ -11,7 +11,7 @@
 | 5 | ทอฝัน ธัญญเจริญ|6721207037 |thofun19-th |
 | 6 | สุธาทิพย์ พูดขุนทด|6721207042 |iceZy24-24 |
 ---
-Github Page: https://bewka555.github.io/smart-campus-study-room-booking/
+Github Page:https://bewka555.github.io/smart-campus-study-room-booking/
 ## ฟีเจอร์
 - [x] F1 fetch `data/rooms.json` แล้วสร้างการ์ดห้องด้วย DOM
 - [x] F2 กรองตามความจุขั้นต่ำและอุปกรณ์ (checkbox หลายตัว)
