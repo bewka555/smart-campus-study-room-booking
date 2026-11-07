@@ -1,0 +1,169 @@
+/* ธีมม่วง-ขาว สีเรียบ ไม่ไล่สี ไม่เรืองแสง */
+:root {
+  --primary: #5b3f9e;
+  --primary-dark: #3f2a78;
+  --primary-soft: #ece6fb;
+  --bg: #f7f5fc;
+  --surface: #ffffff;
+  --text: #2b2340;
+  --muted: #5a5073;
+  --border: #d9d0ee;
+  --free-bg: #e8f5ea; --free-text: #17421f; --free-line: #2e7d46;
+  --busy-bg: #fbe9ec; --busy-text: #7a1730; --busy-line: #b3304a;
+  --past-bg: #eeeeee; --past-text: #4d4d4d;
+  --radius: 12px;
+}
+*, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; font-family: 'Noto Sans Thai', system-ui, sans-serif; font-size: 1rem; line-height: 1.65; background: var(--bg); color: var(--text); }
+img { max-width: 100%; display: block; }
+a { color: var(--primary); }
+a:hover { color: var(--primary-dark); }
+h1, h2, h3 { line-height: 1.3; color: var(--primary-dark); }
+h1 { font-size: 1.6rem; margin: 1.5rem 0 .75rem; }
+h2 { font-size: 1.25rem; margin: 1.5rem 0 .5rem; }
+.wrap { width: 100%; max-width: 1100px; margin-inline: auto; padding-inline: 1rem; }
+main.wrap { padding-bottom: 2.5rem; min-height: 60vh; }
+.muted { color: var(--muted); font-size: .95rem; margin: .25rem 0 .75rem; }
+.icon { width: 1.25em; height: 1.25em; fill: currentColor; flex: none; }
+
+:focus-visible { outline: 3px solid var(--primary-dark); outline-offset: 2px; }
+.site-footer :focus-visible { outline-color: #fff; }
+.skip { position: absolute; left: -999px; background: #fff; padding: .5rem 1rem; z-index: 10; }
+.skip:focus { left: .5rem; top: .5rem; }
+
+/* Header + nav (Flexbox) */
+.site-header { background: #fff; border-bottom: 2px solid var(--primary); }
+.header-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .5rem; padding-block: .6rem; }
+.brand { display: flex; align-items: center; gap: .6rem; color: var(--primary-dark); text-decoration: none; }
+.brand .icon { width: 2.4rem; height: 2.4rem; color: var(--primary); }
+.brand-text { display: flex; flex-direction: column; line-height: 1.25; }
+.brand-text strong { font-size: 1.25rem; }
+.brand-text small { color: var(--muted); }
+.nav-toggle { display: none; padding: .4rem 1rem; font: inherit; font-weight: 600; background: #fff; color: var(--primary-dark); border: 2px solid var(--primary); border-radius: 8px; cursor: pointer; transition: background-color .2s; }
+.nav-toggle:hover { background: var(--primary-soft); }
+.has-js .nav-toggle { display: inline-block; }
+#main-nav { width: 100%; }
+.has-js #main-nav { display: none; }
+.has-js #main-nav.open { display: block; }
+.site-header ul { display: flex; flex-direction: column; gap: .25rem; list-style: none; margin: 0; padding: 0; }
+.site-header nav a { display: flex; align-items: center; gap: .45rem; padding: .45rem .9rem; border-radius: 999px; color: var(--text); text-decoration: none; transition: background-color .2s, color .2s; }
+.site-header nav a:hover { background: var(--primary-soft); color: var(--primary-dark); }
+.site-header nav a[aria-current="page"] { background: var(--primary); color: #fff; font-weight: 600; }
+
+/* Footer */
+.site-footer { background: var(--primary); color: #fff; padding-block: 1.25rem; }
+.footer-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
+.footer-brand { display: flex; align-items: center; gap: .6rem; margin: 0; line-height: 1.3; }
+.footer-brand .icon { width: 2.2rem; height: 2.2rem; }
+.site-footer ul { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; list-style: none; margin: 0; padding: 0; }
+.site-footer a { color: #fff; transition: opacity .2s; }
+.site-footer a:hover { color: #fff; opacity: .8; }
+.footer-note { margin: 0; font-size: .9rem; }
+
+/* ปุ่ม */
+.btn { display: inline-flex; align-items: center; gap: .5rem; padding: .55rem 1.2rem; border: 2px solid var(--primary); border-radius: 10px; background: var(--primary); color: #fff; font: inherit; font-weight: 600; text-decoration: none; cursor: pointer; transition: background-color .2s, color .2s, border-color .2s; }
+.btn:hover { background: var(--primary-dark); border-color: var(--primary-dark); color: #fff; }
+.btn-ghost { background: #fff; color: var(--primary-dark); }
+.btn-ghost:hover { background: var(--primary-soft); color: var(--primary-dark); }
+.btn-danger { background: #fff; color: var(--busy-text); border-color: var(--busy-line); }
+.btn-danger:hover { background: var(--busy-bg); color: var(--busy-text); border-color: var(--busy-line); }
+.btn-sm { padding: .3rem 1rem; font-size: .95rem; }
+
+/* Alert */
+.alert { padding: .75rem 1rem; border-radius: var(--radius); border: 1px solid; margin: 1rem 0; }
+.alert[hidden] { display: none; }
+.alert-error { background: var(--busy-bg); border-color: var(--busy-line); color: var(--busy-text); }
+.alert-ok { background: var(--free-bg); border-color: var(--free-line); color: var(--free-text); }
+
+/* หน้าแรก: hero พื้นสีเรียบ (ไม่มีไล่สี/ลายก้อนเมฆ) */
+.hero { display: grid; gap: 1.25rem; align-items: center; background: var(--primary-soft); border-radius: 16px; padding: 1.25rem; margin-top: 1.25rem; }
+.hero h1 { margin: 0 0 .25rem; font-size: 1.9rem; }
+.hero-sub { margin: 0 0 1rem; font-size: 1.15rem; color: var(--muted); }
+.actions { display: flex; flex-wrap: wrap; gap: .75rem; margin: 0; }
+.hero img { width: 100%; aspect-ratio: 5 / 3; object-fit: cover; border-radius: var(--radius); border: 4px solid #fff; background: #fff; }
+
+.summary { display: grid; gap: .75rem; list-style: none; padding: 0; margin: 1rem 0 0; }
+.sum-card { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: .9rem 1rem; }
+.sum-card p { display: flex; flex-direction: column; margin: 0; line-height: 1.35; }
+.sum-card strong { font-size: 1.6rem; color: var(--primary-dark); }
+.sum-icon { display: grid; place-items: center; width: 3rem; height: 3rem; border-radius: 50%; background: var(--primary-soft); color: var(--primary); }
+.sum-icon .icon { width: 1.5rem; height: 1.5rem; }
+.sum-icon.ok { background: var(--free-bg); color: var(--free-line); }
+.sum-card .sum-time { flex-direction: row; align-items: center; gap: .35rem; margin-left: auto; font-size: .92rem; color: var(--muted); }
+.empty { background: var(--surface); border: 1px dashed var(--border); border-radius: var(--radius); padding: .75rem 1rem; list-style: none; }
+/* สถิติห้อง: grid ของการ์ด */
+
+/* ตัวกรอง */
+.filters { display: flex; flex-direction: column; gap: 1rem; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; }
+fieldset { border: 1px solid var(--border); border-radius: 8px; margin: 0; padding: .5rem .75rem .75rem; }
+legend { padding-inline: .4rem; font-weight: 600; }
+.checks { display: flex; flex-wrap: wrap; gap: .5rem 1.25rem; }
+.check { display: flex; align-items: center; gap: .4rem; cursor: pointer; }
+.check input { width: 1.2rem; height: 1.2rem; accent-color: var(--primary); }
+/* ฟอร์ม */
+.field { display: flex; flex-direction: column; gap: .3rem; }
+label { font-weight: 600; }
+input, select { font: inherit; padding: .5rem .7rem; border: 2px solid #8d80b3; border-radius: 8px; background: #fff; color: var(--text); transition: border-color .2s; }
+input:hover, select:hover { border-color: var(--primary); }
+input[aria-invalid="true"], select[aria-invalid="true"] { border-color: var(--busy-line); }
+.error { color: var(--busy-text); font-size: .92rem; min-height: 1.2em; }
+.fields { display: grid; grid-template-columns: 1fr; gap: .75rem 1rem; margin-bottom: 1rem; }
+#booking-form > section { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 0 1rem 1rem; margin-top: 1rem; }
+/* ตารางเวลา (CSS Grid) */
+.slots { display: grid; grid-template-columns: repeat(2, 1fr); gap: .5rem; }
+.slot { display: flex; flex-direction: column; align-items: center; gap: .1rem; padding: .5rem; font: inherit; border: 2px solid; border-radius: 8px; cursor: pointer; transition: background-color .2s; }
+.slot-time { font-weight: 700; }
+.slot-status { font-size: .9rem; }
+.slot-free { background: var(--free-bg); color: var(--free-text); border-color: var(--free-line); }
+.slot-free:hover { background: #d3ecd8; }
+.slot-free.picked { background: var(--primary); color: #fff; border-color: var(--primary-dark); }
+.slot-busy { background: var(--busy-bg); color: var(--busy-text); border-color: var(--busy-line); border-style: dashed; cursor: not-allowed; }
+.slot-mine { background: var(--primary-soft); color: var(--primary-dark); border-color: var(--primary); cursor: not-allowed; }
+.slot-past { background: var(--past-bg); color: var(--past-text); border-color: #9a9a9a; cursor: not-allowed; }
+#result { margin-top: 1rem; }
+/* การ์ดห้อง */
+.cards { display: grid; grid-template-columns: 1fr; gap: 1rem; list-style: none; padding: 0; margin: 1rem 0 0; }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; display: flex; flex-direction: column; transition: border-color .2s; }
+.card:hover { border-color: var(--primary); }
+.card img { width: 100%; aspect-ratio: 5 / 3; object-fit: cover; background: var(--primary-soft); }
+.thumb { position: relative; }
+.floor { position: absolute; top: .5rem; left: .5rem; background: var(--primary-dark); color: #fff; padding: .05rem .7rem; border-radius: 6px; font-size: .88rem; font-weight: 600; }
+.card-body { padding: .9rem 1rem 1rem; display: flex; flex-direction: column; gap: .35rem; align-items: flex-start; }
+.card-body h2, .card-body h3 { margin: 0; font-size: 1.15rem; }
+.card-body p { margin: 0; }
+.meta { display: flex; flex-wrap: wrap; gap: .1rem 1rem; color: var(--muted); font-size: .95rem; }
+.meta-item { display: inline-flex; align-items: center; gap: .35rem; }
+.card-foot { display: flex; align-items: center; justify-content: space-between; gap: .5rem; width: 100%; margin-top: .25rem; }
+.status { display: inline-flex; align-items: center; gap: .35rem; padding: .1rem .75rem; border-radius: 999px; background: var(--free-bg); color: var(--free-text); font-size: .92rem; font-weight: 600; }
+.chips { display: flex; flex-wrap: wrap; gap: .4rem; list-style: none; padding: 0; margin: .25rem 0 .5rem; }
+.chips li { background: var(--primary-soft); color: var(--primary-dark); border-radius: 999px; padding: .1rem .7rem; font-size: .9rem; }
+.badge { background: var(--past-bg); color: var(--past-text); border-radius: 6px; padding: .05rem .6rem; font-size: .9rem; }
+.booking-item .card-body { padding: 1rem; }
+
+/* กฎ + FAQ */
+.plain { padding-left: 1.2rem; }
+details { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: .6rem 1rem; margin-bottom: .6rem; }
+summary { cursor: pointer; font-weight: 600; color: var(--primary-dark); }
+summary:hover { color: var(--primary); }
+details p { margin: .5rem 0 0; }
+
+/* Breakpoint 1: แท็บเล็ต */
+@media (min-width: 768px) {
+  h1 { font-size: 2rem; }
+  .has-js .nav-toggle { display: none; }
+  #main-nav, .has-js #main-nav { display: block; width: auto; }
+  .site-header ul { flex-direction: row; flex-wrap: wrap; }
+  .hero { grid-template-columns: 1.1fr 1fr; padding: 2rem; }
+  .hero h1 { font-size: 2.3rem; }
+  .summary { grid-template-columns: repeat(3, 1fr); }
+  .filters { flex-direction: row; align-items: flex-end; flex-wrap: wrap; }
+  .fields { grid-template-columns: 1fr 1fr; }
+  .slots { grid-template-columns: repeat(3, 1fr); }
+  .cards { grid-template-columns: repeat(2, 1fr); }
+}
+/* Breakpoint 2: เดสก์ท็อป */
+@media (min-width: 1100px) {
+  .slots { grid-template-columns: repeat(4, 1fr); }
+  .cards { grid-template-columns: repeat(3, 1fr); }
+}
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
