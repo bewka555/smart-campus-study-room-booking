@@ -1,8 +1,6 @@
 # Study Room Booking — ระบบจองห้องติว Buddy Space
 
-**รายวิชา** SC17332 Mini Project · ธีม Smart Campus · **กลุ่มที่ 4**
-**เว็บ (GitHub Pages):** _ใส่ลิงก์ที่นี่_
-
+ **กลุ่มที่ 4**
 ## สมาชิก
 | ที่ | ชื่อ–สกุล | รหัสนักศึกษา | GitHub username |
 |---|---|---|---|
