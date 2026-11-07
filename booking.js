@@ -1,6 +1,5 @@
-// หน้าจองห้อง: F1 fetch+การ์ดห้อง, F2 กรอง, F3 ตารางเวลา, F4 ฟอร์ม, F5 ตรวจจองซ้อน
 const DATA_URL = "data/rooms.json";
-const STORAGE_KEY = "studyRoomBookings"; // ใช้ key เดียวกับ index.js และ my-bookings.js
+const STORAGE_KEY = "studyRoomBookings"; 
 const OPEN_HOUR = 8;
 const CLOSE_HOUR = 20;
 const MAX_HOURS = 2;
@@ -31,7 +30,6 @@ let rooms = [];
 let jsonBookings = [];
 let selectedRoomId = null;
 
-/* ---------- ฟังก์ชันช่วยเรื่องวันเวลา ---------- */
 function pad(n) {
   return String(n).padStart(2, "0");
 }
@@ -47,7 +45,7 @@ function todayString() {
 function defaultDate() {
   const d = new Date();
   if (d.getHours() >= CLOSE_HOUR) {
-    d.setDate(d.getDate() + 1); // เลยเวลาปิดแล้ว ให้เริ่มที่พรุ่งนี้
+    d.setDate(d.getDate() + 1); 
   }
   return toDateString(d);
 }
@@ -67,8 +65,6 @@ function formatDate(dateStr) {
     weekday: "long", day: "numeric", month: "long", year: "numeric",
   });
 }
-
-/* ---------- ข้อมูลการจอง (JSON + localStorage) ---------- */
 function loadLocalBookings() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
@@ -96,8 +92,6 @@ function saveLocalBooking(booking) {
 function allBookings() {
   return [...jsonBookings, ...loadLocalBookings()];
 }
-
-// ช่วงเวลาซ้อนกันเมื่อ เริ่มใหม่ < จบเดิม และ จบใหม่ > เริ่มเดิม
 function findConflict(bookings, roomId, date, startMin, endMin) {
   return bookings.find(
     (b) =>
@@ -107,12 +101,9 @@ function findConflict(bookings, roomId, date, startMin, endMin) {
       endMin > toMinutes(b.start)
   );
 }
-
 function getSelectedRoom() {
   return rooms.find((r) => r.id === selectedRoomId);
 }
-
-/* ---------- F2: ตัวกรอง ---------- */
 function buildEquipmentFilters() {
   const items = [];
   rooms.forEach((room) => {
@@ -145,8 +136,6 @@ function getFilteredRooms() {
       needed.every((eq) => (room.equipment || []).includes(eq))
   );
 }
-
-/* ---------- F1: การ์ดห้อง ---------- */
 function createRoomCard(room) {
   const isSelected = room.id === selectedRoomId;
   const card = document.createElement("article");
@@ -186,8 +175,6 @@ function renderRooms() {
   roomStatus.textContent = list.length
     ? `พบ ${list.length} ห้องจากทั้งหมด ${rooms.length} ห้อง`
     : "ไม่พบห้องที่ตรงกับเงื่อนไข ลองลดจำนวนคนหรือยกเลิกอุปกรณ์บางรายการ";
-
-  // ถ้าห้องที่เลือกไว้ถูกกรองออก ให้ยกเลิกการเลือก
   if (selectedRoomId && !list.some((r) => r.id === selectedRoomId)) {
     selectedRoomId = null;
     updateRoomDependents();
@@ -219,8 +206,6 @@ function updateRoomDependents() {
     peopleHint.textContent = "เลือกห้องเพื่อดูความจุ";
   }
 }
-
-/* ---------- F3: ตารางช่วงเวลา (CSS Grid สร้างจาก JS) ---------- */
 function getSlotState(bookings, room, date, hour) {
   const startMin = hour * 60;
   const endMin = startMin + 60;
@@ -292,8 +277,6 @@ function fillTimeOptions(select, fromHour, toHour) {
     select.append(new Option(`${pad(h)}:00`, `${pad(h)}:00`));
   }
 }
-
-/* ---------- F4 + F5: ตรวจสอบและบันทึกการจอง ---------- */
 function validateBooking() {
   const errors = [];
   const room = getSelectedRoom();
@@ -436,7 +419,6 @@ function handleSubmit(event) {
   renderSchedule();
 }
 
-/* ---------- เริ่มต้นหน้า ---------- */
 function setupEvents() {
   capacityFilter.addEventListener("input", renderRooms);
   equipmentFilters.addEventListener("change", renderRooms);
