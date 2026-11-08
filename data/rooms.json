@@ -1,0 +1,245 @@
+{
+  "_note": "ข้อมูลห้องมาจากที่กลุ่มสำรวจ (ห้องสมุด อาคาร 8 ชั้น 3, 7, 8) ส่วน bookings เป็นข้อมูลตัวอย่าง 15 รายการ",
+  "rooms": [
+    {
+      "id": "r01",
+      "name": "Buddy Space 1",
+      "building": "ห้องสมุด อาคาร 8",
+      "floor": 3,
+      "capacity": 8,
+      "capacityMin": 6,
+      "maxHours": 2,
+      "equipment": [
+        "ทีวี",
+        "โต๊ะ",
+        "เก้าอี้"
+      ],
+      "image": "images/r01.jpg"
+    },
+    {
+      "id": "r02",
+      "name": "Buddy Space 2",
+      "building": "ห้องสมุด อาคาร 8",
+      "floor": 3,
+      "capacity": 8,
+      "capacityMin": 6,
+      "maxHours": 2,
+      "equipment": [
+        "ทีวี",
+        "โต๊ะ",
+        "เก้าอี้"
+      ],
+      "image": "images/r02.jpg"
+    },
+    {
+      "id": "r03",
+      "name": "Buddy Space 3",
+      "building": "ห้องสมุด อาคาร 8",
+      "floor": 7,
+      "capacity": 10,
+      "capacityMin": 4,
+      "maxHours": 2,
+      "equipment": [
+        "โต๊ะ",
+        "เก้าอี้"
+      ],
+      "image": "images/r03.jpg"
+    },
+    {
+      "id": "r04",
+      "name": "Buddy Space 4",
+      "building": "ห้องสมุด อาคาร 8",
+      "floor": 7,
+      "capacity": 10,
+      "capacityMin": 4,
+      "maxHours": 2,
+      "equipment": [
+        "โต๊ะ",
+        "เก้าอี้"
+      ],
+      "image": "images/r04.jpg"
+    },
+    {
+      "id": "r05",
+      "name": "Buddy Space 6",
+      "building": "ห้องสมุด อาคาร 8",
+      "floor": 8,
+      "capacity": 4,
+      "capacityMin": 2,
+      "maxHours": 2,
+      "equipment": [
+        "ทีวี",
+        "โต๊ะ",
+        "เก้าอี้"
+      ],
+      "image": "images/r05.jpg"
+    },
+    {
+      "id": "r06",
+      "name": "Buddy Space 7",
+      "building": "ห้องสมุด อาคาร 8",
+      "floor": 8,
+      "capacity": 4,
+      "capacityMin": 2,
+      "maxHours": 2,
+      "equipment": [
+        "ทีวี",
+        "โต๊ะ",
+        "เก้าอี้"
+      ],
+      "image": "images/r06.jpg"
+    }
+  ],
+  "bookings": [
+    {
+      "id": "b001",
+      "roomId": "r01",
+      "date": "2026-11-09",
+      "start": "09:00",
+      "end": "11:00",
+      "people": 7,
+      "by": "รินสา ทองปน",
+      "studentId": "6821126035"
+    },
+    {
+      "id": "b002",
+      "roomId": "r03",
+      "date": "2026-11-09",
+      "start": "13:00",
+      "end": "15:00",
+      "people": 6,
+      "by": "ธิดารัตน์ เพ็งสา",
+      "studentId": "6821126034"
+    },
+    {
+      "id": "b003",
+      "roomId": "r02",
+      "date": "2026-11-09",
+      "start": "09:00",
+      "end": "11:00",
+      "people": 6,
+      "by": "พิเชษฐ มะเดื่อ",
+      "studentId": "6621105043"
+    },
+    {
+      "id": "b004",
+      "roomId": "r04",
+      "date": "2026-11-10",
+      "start": "09:00",
+      "end": "11:00",
+      "people": 7,
+      "by": "วรวุฒิ ไชยมา",
+      "studentId": "6621415013"
+    },
+    {
+      "id": "b005",
+      "roomId": "r06",
+      "date": "2026-11-10",
+      "start": "13:00",
+      "end": "15:00",
+      "people": 3,
+      "by": "พงษ์พิพัฒน์ วงศ์กาลเลิศ",
+      "studentId": "6721712041"
+    },
+    {
+      "id": "b006",
+      "roomId": "r05",
+      "date": "2026-11-10",
+      "start": "09:00",
+      "end": "11:00",
+      "people": 2,
+      "by": "ตะวัน ภูวงษา",
+      "studentId": "6721712045"
+    },
+    {
+      "id": "b007",
+      "roomId": "r05",
+      "date": "2026-11-10",
+      "start": "14:00",
+      "end": "16:00",
+      "people": 4,
+      "by": "ธนินทร์ ธนวุฒิกร",
+      "studentId": "6621415005"
+    },
+    {
+      "id": "b008",
+      "roomId": "r02",
+      "date": "2026-11-11",
+      "start": "09:00",
+      "end": "11:00",
+      "people": 7,
+      "by": "จิรภัทรทองทา โรจนปัญญา",
+      "studentId": "6621415011"
+    },
+    {
+      "id": "b009",
+      "roomId": "r06",
+      "date": "2026-11-11",
+      "start": "13:00",
+      "end": "15:00",
+      "people": 3,
+      "by": "ภานุวัฒน์ เปี้ยฟ้า",
+      "studentId": "6721712061"
+    },
+    {
+      "id": "b010",
+      "roomId": "r01",
+      "date": "2026-11-12",
+      "start": "14:00",
+      "end": "16:00",
+      "people": 8,
+      "by": "สิทธิรินทร์ ศรีจันทร์",
+      "studentId": "6621415007"
+    },
+    {
+      "id": "b011",
+      "roomId": "r04",
+      "date": "2026-11-12",
+      "start": "13:00",
+      "end": "15:00",
+      "people": 5,
+      "by": "จิรกานต์ ทองอนาค",
+      "studentId": "6621105033"
+    },
+    {
+      "id": "b012",
+      "roomId": "r03",
+      "date": "2026-11-13",
+      "start": "13:00",
+      "end": "15:00",
+      "people": 7,
+      "by": "ธิดารัตน์ เพ็งสา",
+      "studentId": "6821126034"
+    },
+    {
+      "id": "b013",
+      "roomId": "r03",
+      "date": "2026-11-13",
+      "start": "09:00",
+      "end": "11:00",
+      "people": 8,
+      "by": "นภัสสร ปรีดาผล",
+      "studentId": "6621126040"
+    },
+    {
+      "id": "b014",
+      "roomId": "r05",
+      "date": "2026-11-14",
+      "start": "14:00",
+      "end": "16:00",
+      "people": 4,
+      "by": "ธนกร บุญเรือง",
+      "studentId": "6721712055"
+    },
+    {
+      "id": "b015",
+      "roomId": "r06",
+      "date": "2026-11-14",
+      "start": "09:00",
+      "end": "11:00",
+      "people": 3,
+      "by": "ศิริประภา การประชุม",
+      "studentId": "6721712047"
+    }
+  ]
+}
