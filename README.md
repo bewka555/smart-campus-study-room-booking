@@ -28,7 +28,16 @@ Github Page:https://bewka555.github.io/smart-campus-study-room-booking/
 ## แหล่งที่มาของข้อมูล
 - ห้อง (6 ห้อง): สำรวจเองที่ห้องสมุด อาคาร 8 ชั้น 3, 7 และ 8 — 05/11/2026/วิมลณัฐ,พรนภัส
 - การจองตัวอย่าง 15 รายการใน `data/rooms.json` เป็นข้อมูลตัวอย่างสำหรับทดสอบ **ต้องแทนด้วยข้อมูลจริงที่กลุ่มเก็บ** แล้วแก้ข้อความนี้
-- รูปภาพ: _ถ่ายเอง / ระบุที่มาและสิทธิ์_ (วางไฟล์ `images/r01.jpg` … `r06.jpg`)
+- รูปภาพ:ถ่ายเอง
+<img width="1000" height="750" alt="r04" src="https://github.com/user-attachments/assets/1e273221-6fce-4afe-9290-2361e799b76d" />
+<img width="1000" height="750" alt="r03" src="https://github.com/user-attachments/assets/08f32548-56a5-4a61-8fa3-c68339b0a24b" />
+<img width="1000" height="750" alt="r02" src="https://github.com/user-attachments/assets/c3c980ee-3c0f-4a89-a742-8282f0a71c0b" />
+<img width="1000" height="750" alt="r06" src="https://github.com/user-attachments/assets/79d8790f-9ea8-43b0-b699-81c5a04ab4cd" />
+<img width="1024" height="538" alt="r05" src="https://github.com/user-attachments/assets/bc968edb-969e-46ef-8af0-9f34904296a1" />
+<img width="1000" height="750" alt="r01" src="https://github.com/user-attachments/assets/5bfd2350-467d-4a47-8eb5-46f2a9caa09d" />
+<img width="1200" height="674" alt="hero" src="https://github.com/user-attachments/assets/ffbb9646-150b-4140-9d1e-26bd0efeeae2" />
+
+
 
 ## Lighthouse (Accessibility)
 <img width="1907" height="970" alt="Screenshot 2026-11-08 222042" src="https://github.com/user-attachments/assets/ce1b6750-54c3-4b29-9451-339faef6386f" />
