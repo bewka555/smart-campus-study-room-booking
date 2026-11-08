@@ -6,7 +6,6 @@ const equipBox = document.getElementById('equipment-filters');
 const countEl = document.getElementById('result-count');
 let rooms = [];
 
-// F1: สร้างการ์ดห้องด้วย DOM
 function card(r) {
   const li = App.el('li', 'card');
   const img = document.createElement('img');
@@ -31,7 +30,6 @@ function card(r) {
   return li;
 }
 
-// F2: กรองตามความจุขั้นต่ำและอุปกรณ์ (ต้องมีครบทุกอย่างที่ติ๊ก)
 function render() {
   const min = Number(minCap.value) || 0;
   const checked = [...equipBox.querySelectorAll('input:checked')].map(i => i.value);
