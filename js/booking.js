@@ -27,7 +27,7 @@ function fillOptions() {
   }
 }
 
-// สถานะของแต่ละช่อง 1 ชั่วโมง: free / busy / mine / past
+
 function slotStatus(room, date, h) {
   const slot = { start: App.hh(h), end: App.hh(h + 1) };
   const mineIds = App.getMine().map(b => b.id);
@@ -39,7 +39,7 @@ function slotStatus(room, date, h) {
 
 const STATUS_TEXT = { free: 'ว่าง', busy: 'ไม่ว่าง', mine: 'จองโดยคุณ', past: 'เลยเวลาแล้ว' };
 
-// F3: ตารางช่วงเวลา 08:00–20:00 สร้างด้วย JS แสดงผลด้วย CSS Grid
+
 function renderSlots() {
   const room = currentRoom();
   slotGrid.replaceChildren();
@@ -63,7 +63,7 @@ function renderSlots() {
   }
 }
 
-// T2: ตรวจสอบฟอร์มด้วย JS (นอกเหนือจาก attribute ใน HTML)
+
 function validate() {
   const errs = {};
   const room = currentRoom();
@@ -108,11 +108,10 @@ function showResult(text, ok) {
     a.href = 'my-bookings.html';
     result.append(a);
   }
-  result.focus();   // ให้โปรแกรมอ่านหน้าจออ่านผลทันที
+  result.focus();   
 }
 
-// HTML validation (required, pattern, min, max) ทำงานก่อน แล้วเรามาแทนที่กล่องข้อความของเบราว์เซอร์
-// ด้วยข้อความภาษาไทยของเรา (invalid ไม่ bubble จึงต้องฟังแบบ capture)
+
 form.addEventListener('invalid', ev => {
   ev.preventDefault();
   const errs = validate();
@@ -121,7 +120,7 @@ form.addEventListener('invalid', ev => {
   showErrors(errs);
 }, true);
 
-// จำนวนคนสูงสุดตามความจุของห้องที่เลือก
+
 function syncMaxPeople() {
   const room = currentRoom();
   if (room) f.people.max = room.capacity;
@@ -139,7 +138,7 @@ form.addEventListener('submit', ev => {
     start: f.start.value, end: f.end.value, people: Number(f.people.value),
     by: f.name.value.trim(), studentId: f.sid.value.trim()
   };
-  // F5: ตรวจจองซ้อนกับทั้ง JSON และ localStorage แล้วบอกเหตุผล
+ 
   const c = App.findConflict(data, nb);
   if (c) {
     showResult(`จองไม่ได้: ${App.label(currentRoom())} วันที่ ${App.fmtDate(nb.date)} เวลา ${nb.start}–${nb.end} ซ้อนกับการจองเดิมช่วง ${c.start}–${c.end} กรุณาเลือกช่วงเวลาที่ว่าง`, false);
@@ -156,18 +155,18 @@ form.addEventListener('submit', ev => {
   renderSlots();
 });
 
-// คลิกช่องว่างในตาราง เพื่อเลือกเวลา (event delegation)
+
 slotGrid.addEventListener('click', ev => {
   const btn = ev.target.closest('button[data-hour]');
   if (!btn) return;
   const h = Number(btn.dataset.hour);
   const startMin = f.start.value ? App.toMin(f.start.value) / 60 : null;
   const endMin = f.end.value ? App.toMin(f.end.value) / 60 : null;
-  // ถ้าเลือกช่องถัดจากช่วงที่เลือกอยู่ ให้ต่อช่วงออกไป ไม่เช่นนั้นเริ่มเลือกใหม่
+ 
   if (startMin !== null && endMin === h && h + 1 - startMin <= App.MAX_HOURS) f.end.value = App.hh(h + 1);
   else { f.start.value = App.hh(h); f.end.value = App.hh(h + 1); }
   renderSlots();
-  slotGrid.querySelector(`button[data-hour="${h}"]`)?.focus();   // renderSlots สร้างปุ่มใหม่ ต้องคืน focus
+  slotGrid.querySelector(`button[data-hour="${h}"]`)?.focus();   
 });
 
 [f.room, f.date, f.start, f.end].forEach(el => el.addEventListener('change', renderSlots));
