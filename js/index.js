@@ -11,14 +11,14 @@ let appliedFreeQuery = '';
 let appliedFreeQueryLabel = '';
 let dashboardData;
 
-// นับจำนวนการจองต่อห้อง (JSON + localStorage) เรียงมากไปน้อย
+
 function countByRoom(data) {
   const all = App.allBookings(data);
   return data.rooms.map(r => ({ room: r, n: all.filter(b => b.roomId === r.id).length }))
     .sort((a, b) => b.n - a.n);
 }
 
-// สร้าง snapshot ของวันและเวลาจาก Date ชุดเดียวกัน เพื่อป้องกันการเปลี่ยนวันคาบเกี่ยวเที่ยงคืน
+
 function getAvailabilitySnapshot(data, now = new Date()) {
   const minute = now.getHours() * 60 + now.getMinutes();
   const today = `${now.getFullYear()}-${App.pad(now.getMonth() + 1)}-${App.pad(now.getDate())}`;
@@ -187,15 +187,14 @@ function initAvailabilityControls(data) {
   });
 }
 
-// ฟีเจอร์เสริม: สถิติห้องที่ถูกจองมากที่สุด (แสดงในการ์ดสรุปด้านบน)
+
 function renderStats(data) {
   const top = countByRoom(data)[0];
   document.getElementById('sum-total').textContent = data.rooms.length;
   document.getElementById('sum-top').textContent = top && top.n > 0 ? App.label(top.room) : '–';
 }
 
-// แนะนำห้อง: เรียงตามจำนวนชั่วโมงที่ยังว่างมากที่สุด
-// ถ้าเลยเวลาปิดแล้วจะแนะนำของวันพรุ่งนี้
+
 function addDays(dateStr, n) {
   const d = new Date(dateStr + 'T00:00:00');
   d.setDate(d.getDate() + n);
