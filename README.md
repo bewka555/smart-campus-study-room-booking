@@ -31,5 +31,12 @@ Github Page:https://bewka555.github.io/smart-campus-study-room-booking/
 - รูปภาพ: _ถ่ายเอง / ระบุที่มาและสิทธิ์_ (วางไฟล์ `images/r01.jpg` … `r06.jpg`)
 
 ## Lighthouse (Accessibility)
-_ใส่ภาพหน้าจอผลของแต่ละหน้า_
+<img width="1907" height="970" alt="Screenshot 2026-11-08 222042" src="https://github.com/user-attachments/assets/ce1b6750-54c3-4b29-9451-339faef6386f" />
+<img width="1917" height="962" alt="Screenshot 2026-11-08 222748" src="https://github.com/user-attachments/assets/0013c030-fd58-4bd5-b9a8-864f4b69193d" />
+<img width="1913" height="965" alt="Screenshot 2026-11-08 222143" src="https://github.com/user-attachments/assets/c4fea824-ba34-4982-a531-2e69ff295f98" />
+<img width="1917" height="965" alt="Screenshot 2026-11-08 222237" src="https://github.com/user-attachments/assets/dbf3e719-cc55-46fb-81ce-b01b380649ee" />
+<img width="1917" height="961" alt="Screenshot 2026-11-08 222309" src="https://github.com/user-attachments/assets/a470fd75-ba98-4c1b-b6a2-70573c1d4e3d" />
+<img width="1917" height="958" alt="Screenshot 2026-11-08 222712" src="https://github.com/user-attachments/assets/4cd5c685-a87f-4dbe-bcce-2e92773edb11" />
+
+
 
