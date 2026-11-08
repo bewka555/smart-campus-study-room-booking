@@ -1,8 +1,8 @@
 'use strict';
 const App = {
-  OPEN: 8,          // เปิด 08:00
-  CLOSE: 20,        // ปิด 20:00
-  MAX_HOURS: 2,     // จองได้ไม่เกิน 2 ชม./ครั้ง
+  OPEN: 8,          
+  CLOSE: 20,        
+  MAX_HOURS: 2,     
   KEY: 'studyRoomMyBookings',
 
 
