@@ -5,7 +5,7 @@ const empty = document.getElementById('empty');
 const status = document.getElementById('status');
 let data;
 
-
+// F6: แสดงการจองจาก localStorage
 function render() {
   const mine = App.getMine().sort((a, b) => (a.date + a.start).localeCompare(b.date + b.start));
   list.replaceChildren();
@@ -35,7 +35,7 @@ function render() {
   }
 }
 
-
+// ถามยืนยันก่อนยกเลิก แล้วลบออกจาก localStorage ช่วงเวลานั้นจะกลับมาว่างในตารางหน้าจอง
 function cancel(b, roomText) {
   if (!confirm(`ยืนยันยกเลิกการจอง ${roomText} วันที่ ${App.fmtDate(b.date)} เวลา ${b.start}–${b.end} ?`)) return;
   if (!App.saveMine(App.getMine().filter(x => x.id !== b.id))) {
@@ -45,7 +45,7 @@ function cancel(b, roomText) {
   status.hidden = false;
   status.textContent = `ยกเลิกการจอง ${roomText} เวลา ${b.start}–${b.end} แล้ว ช่วงเวลานี้กลับมาว่าง`;
   render();
-  status.focus();   
+  status.focus();   // คืน focus ให้ผู้ใช้คีย์บอร์ด/โปรแกรมอ่านหน้าจอ (ปุ่มที่กดถูกลบไปแล้ว)
 }
 
 (async () => {
