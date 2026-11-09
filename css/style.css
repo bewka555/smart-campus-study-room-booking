@@ -59,7 +59,7 @@ main.wrap { padding-bottom: 2.5rem; min-height: 60vh; }
 .footer-note { margin: 0; font-size: .9rem; }
 
 
-.btn { display: inline-flex; align-items: center; gap: .5rem; padding: .55rem 1.2rem; border: 2px solid var(--primary); border-radius: 10px; background: var(--primary); color: #fff; font: inherit; font-weight: 600; text-decoration: none; cursor: pointer; transition: background-color .2s, color .2s, border-color .2s; }
+.btn { display: inline-flex; align-items: center; gap: .5rem; padding: .55rem 1.2rem; border: 2px solid var(--primary); border-radius: 10px; background: var(--primary); color: ##45e63a; font: inherit; font-weight: 600; text-decoration: none; cursor: pointer; transition: background-color .2s, color .2s, border-color .2s; }
 .btn:hover { background: var(--primary-dark); border-color: var(--primary-dark); color: #fff; }
 .btn-ghost { background: #fff; color: var(--primary-dark); }
 .btn-ghost:hover { background: var(--primary-soft); color: var(--primary-dark); }
