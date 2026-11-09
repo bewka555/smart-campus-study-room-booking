@@ -350,7 +350,7 @@ button:disabled { opacity: .72; }
   .availability-progress > span { transition: none; }
 }
 
-/* จัดหน้าให้ footer อยู่ล่างสุด เฉพาะหน้า การจองของฉัน และ กฎการใช้ห้อง */
+
 body.page-bottom-layout {
   min-height: 100vh;
   display: flex;
@@ -440,7 +440,7 @@ body { padding-top: var(--site-header-height); }
 .schedule-past { color:#5f5968; background:#efedf2; }
 @media(max-width:760px) { .schedule-controls { grid-template-columns:1fr; }.schedule-summary { align-items:flex-start; flex-direction:column; }.schedule-summary .btn { width:100%; justify-content:center; } }
 
-/* ตารางรายวัน: ไม่ให้เลื่อนแนวนอนบนมือถือ */
+
 .t-short { display:none; }
 @media (max-width:760px) {
   .schedule-scroll { overflow-x:visible; border-radius:10px; }
