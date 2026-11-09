@@ -330,7 +330,7 @@ button:disabled { opacity: .72; }
   .availability-heading { grid-template-columns: minmax(0, 1fr) minmax(210px, .42fr); }
   .availability-stat { padding: .8rem .9rem; column-gap: .65rem; }
   .availability-stat-label { font-size: .84rem; }
-  .availability-stat strong { font-size: 1.55rem; }
+  .availability-stat strong { font-size: 48px; }
   .availability-filters { grid-template-columns: minmax(0, 1.5fr) minmax(130px, .7fr); }
   .availability-filter-actions { grid-column: 1 / -1; }
 }
