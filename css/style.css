@@ -2,6 +2,7 @@
   --primary: #5b3f9e;
   --primary-dark: #3f2a78;
   --primary-soft: #ece6fb;
+  --green:#49fd36;
   --bg: #f7f5fc;
   --surface: #ffffff;
   --text: #2b2340;
@@ -59,7 +60,7 @@ main.wrap { padding-bottom: 2.5rem; min-height: 60vh; }
 .footer-note { margin: 0; font-size: .9rem; }
 
 
-.btn { display: inline-flex; align-items: center; gap: .5rem; padding: .55rem 1.2rem; border: 2px solid var(--primary); border-radius: 10px; background: #28de31; font: inherit; font-weight: 600; text-decoration: none; cursor: pointer; transition: background-color .2s, color .2s, border-color .2s; }
+.btn { display: inline-flex; align-items: center; gap: .5rem; padding: .55rem 1.2rem; border: 2px solid var(--primary); border-radius: 10px; background: var(--green); font: inherit; font-weight: 600; text-decoration: none; cursor: pointer; transition: background-color .2s, color .2s, border-color .2s; }
 .btn:hover { background: var(--primary-dark); border-color: var(--primary-dark); color: #fff; }
 .btn-ghost { background: #fff; color: var(--primary-dark); }
 .btn-ghost:hover { background: var(--primary-soft); color: var(--primary-dark); }
